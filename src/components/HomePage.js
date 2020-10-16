@@ -12,12 +12,14 @@ export class HomePage extends Component {
         } = this.props.data;
         return (
             <div className="homepage-container">
-                <div className="name-pane">
+                <div className="name-pane" >
                     <h1>{firstName} {lastName}</h1>
-                    <p align="right">
-                        <a href="https://www.linkedin.com/in/shiv-anirudh-b47265199/" target="blank"><img src={linkedin} alt="shivanirudh" height="30" width="30"/></a>
-                        <a href="https://github.com/Shivanirudh" target="blank"><img align="center" src={github} alt="shivanirudh" height="30" width="30" /></a>
-                        <a href="https://instagram.com/shiv_anirudh" target="blank"><img align="center" src={instagram} alt="shiv_anirudh" height="30" width="30" /></a>
+                    <p>
+                        <a href="https://www.linkedin.com/in/shivanirudh-s-g-b47265199/" target="blank"><img src={linkedin} alt="shivanirudh" height="30" width="30"/></a>
+                        &nbsp;&nbsp;
+                        <a href="https://github.com/Shivanirudh" target="blank"><img src={github} alt="shivanirudh" height="30" width="30"/></a>
+                        &nbsp;&nbsp;
+                        <a href="https://instagram.com/shiv_anirudh" target="blank"><img src={instagram} alt="shiv_anirudh" height="30" width="30"/></a>
                     </p>
                 </div>
                 <div className="pic-pane">
