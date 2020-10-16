@@ -1,6 +1,8 @@
 import React from 'react';
+import Spring from 'react-spring';
 import HomePage from "./components/HomePage";
 import Footer from "./components/Footer";
+import Background from "./components/Background";
 
 function App() {
   const data = {
@@ -10,6 +12,7 @@ function App() {
   }
   return (
     <div className="container-app">
+      <Background/>
       <HomePage data={data}/>
       <Footer data={data}/>
     </div>
