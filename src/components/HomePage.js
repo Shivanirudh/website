@@ -3,6 +3,7 @@ import Picture from "./Picture";
 import linkedin from "./images/linkedin.ico";
 import github from "./images/github.ico";
 import instagram from "./images/instagram.ico";
+import Background from "./Background";
 
 export class HomePage extends Component {
     render() {
@@ -12,6 +13,7 @@ export class HomePage extends Component {
         } = this.props.data;
         return (
             <div className="homepage-container">
+                <Background/>
                 <div className="name-pane" >
                     <h1>{firstName} {lastName}</h1>
                     <p>

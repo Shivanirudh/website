@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import Particles from "react-particles-js";
+
 export class Background extends Component {
     render() {
         return (
                 <Particles className = "particles"
-                params={{
+                  params={{
                     background: {
                       color: {
                         value: "#000000",
