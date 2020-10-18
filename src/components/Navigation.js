@@ -7,18 +7,22 @@ const StyledSideNav = styled.div`
   height: 70px;
   width: 75px; 
   text-align: center; 
-  margin-bottom: 2;   
+  margin-bottom: 2;
+  justify-content:space-around;   
   a {
     font-size: 2.7em;
     color: ${(props) => props.active ? "white" : "#393A47"};
     :hover {
-      opacity: 1;
+      opacity: 0.7;
       text-decoration: none; 
     }  
   }
 `;
 
-const NavIcon = styled.div``;
+const NavIcon = styled.div`
+  align-self: center;
+  padding: 10px;  
+`;
 class NavItem extends React.Component {
   handleClick = () => {
     const { path, onItemClick } = this.props;
@@ -66,15 +70,17 @@ export class Navigation extends Component {
     render() {
       const {items, activePath} = this.state
         return (
-          <StyledSideNav>
-          {
-            items.map((item) => {
-              return (
-                <NavItem path={item.path} name={item.name} css={item.css} onItemClick={this.onItemClick} active={item.path === activePath} key={item.key}/>
-              )
-            })
-          }
-        </StyledSideNav>
+          <div className="nav">
+            <StyledSideNav>
+            {
+              items.map((item) => {
+                return (
+                  <NavItem path={item.path} name={item.name} css={item.css} onItemClick={this.onItemClick} active={item.path === activePath} key={item.key}/>
+                )
+              })
+            }
+          </StyledSideNav>
+        </div>
         )
     }
 }

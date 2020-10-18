@@ -13,7 +13,7 @@ body {
   color: white;
 }
 
-nav{
+.nav{
   position: fixed;
   height: 100%;
   width: 75px;
