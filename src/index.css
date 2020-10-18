@@ -14,6 +14,17 @@ body {
 }
 
 nav{
+  position: fixed;
+  height: 100%;
+  width: 75px;
+  z-index: 1;
+  top: 3.4em;
+  background-color: black;
+  overflow-x: hidden;
+  padding-top: 10px;
+}
+/*
+nav{
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -24,7 +35,7 @@ nav{
   left: 0;
   width:100%;
   min-height: 10vh;
-}
+}*/
 
 .root {
   min-height: 100%;
@@ -80,14 +91,6 @@ h3 {
   border-color: white;
 }
 
-.navbar{
-  background: black;
-  display: inline-flexbox;
-  position: absolute;
-  bottom: 10;
-  height: 30px;
-  width: 100%;
-}
 .footer{  
   background: black;
   position: absolute;
@@ -96,9 +99,4 @@ h3 {
   font-weight: 400;
   width: 100%;
   height: 30px;
-}
-
-.active-option{
-  font-weight: "bold";
-  color: "red";
 }
