@@ -13,6 +13,19 @@ body {
   color: white;
 }
 
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: black;
+  color: white;
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  width:100%;
+  min-height: 10vh;
+}
+
 .root {
   min-height: 100%;
   position: relative;
@@ -86,6 +99,6 @@ h3 {
 }
 
 .active-option{
-  fontWeight: "bold";
+  font-weight: "bold";
   color: "red";
 }
