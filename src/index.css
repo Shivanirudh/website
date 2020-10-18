@@ -16,7 +16,7 @@ body {
 .nav{
   position: fixed;
   height: 100%;
-  width: 75px;
+  width: 200px;
   z-index: 1;
   top: 3.4em;
   background-color: black;
