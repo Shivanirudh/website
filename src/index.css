@@ -19,10 +19,29 @@ body {
   width: 200px;
   z-index: 1;
   top: 3.4em;
-  background-color: black;
   overflow-x: hidden;
   padding-top: 10px;
 }
+
+.nav-icon{
+  position: relative;
+  width: 20px;
+  align-items:center;
+  padding: 10px;  
+  font-size: 20px;
+}
+a:link, a:visited, a:hover{
+  background-color: black;
+  color: white;
+  text-decoration: none;
+}
+
+a:active{
+  background-color: blue;
+  color: white;
+  text-decoration: none;
+}
+
 /*
 nav{
   display: flex;
@@ -82,7 +101,8 @@ h3 {
 .pic-pane{
   width: 40%;
   height: auto; 
-  padding: 2rem 3rem;
+  padding: 3rem;
+  left: 3rem;
   text-align:center;
 }
 .picture{

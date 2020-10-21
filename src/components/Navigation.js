@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link, withRouter} from "react-router-dom";
+import { BrowserRouter as Router, Route, Link} from "react-router-dom";
 import styled from "styled-components";
 
 const StyledSideNav = styled.div`
-  background: black;
   height: 70px;
   width: 200px; 
-  justify: left; 
   padding-left:1rem;
   padding-top: 3rem;
   margin-bottom: 0;
@@ -16,20 +14,8 @@ const StyledSideNav = styled.div`
     font-size: 2.7em;
     :hover {
       opacity: 0.7; 
-    }
-    :selection{
-      color: "white";
-      background: ${(props) => props.active ? "blue" : "black"}
-    }  
+    } 
   }
-`;
-
-const NavIcon = styled.div`
-  width: 150px;
-  align-items:center;
-  padding: 10px;  
-  font-size: 20px;
-  text-decoration: none;
 `;
 
 class NavItem extends React.Component {
@@ -42,7 +28,7 @@ class NavItem extends React.Component {
     return (
       <div active={active}>
         <Link to={this.props.path} className={this.props.css} onClick={this.handleClick}>
-          <NavIcon>{this.props.name}</NavIcon>
+          <div className="nav-icon">{this.props.name}</div>
         </Link>
       </div>
     )
@@ -59,16 +45,16 @@ export class Navigation extends Component {
             path: '/', name: 'Home', css: 'fas fa-fw fa-home', key: 1 
           },
           { 
-            path: '/about', name: 'About', css: 'fas fa-fw fa-clock', key: 2
+            path: '/about', name: 'About', css: 'fas fa-fw fa-user', key: 2
           },
           {
             path: '/cv', name: 'CV', css: 'fas fa-fw fa-file', key: 3
           },
           {
-            path: '/project', name: 'Project', css: 'fas fa-fw fa-box-open', key: 4
+            path: '/project', name: 'Projects', css: 'fas fa-fw fa-archive', key: 4
           },
           {
-            path: '/contact', name: 'Contact Me', css: 'fas fa-fw fa-address-card', key: 5
+            path: '/contact', name: 'Contact', css: 'fas fa-fw fa-envelope', key: 5
           }
         ]
       }  
@@ -79,7 +65,7 @@ export class Navigation extends Component {
     render() {
       const {items, activePath} = this.state
         return (
-          <RoutedSideNav className="nav">
+          <div className="nav">
             <StyledSideNav>
             {
               items.map((item) => {
@@ -89,9 +75,9 @@ export class Navigation extends Component {
               })
             }
           </StyledSideNav>
-        </RoutedSideNav>
+        </div>
         )
     }
 }
-const RoutedSideNav = withRouter(Navigation);
+
 export default Navigation
