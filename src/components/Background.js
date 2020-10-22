@@ -31,8 +31,15 @@ export class Background extends Component {
                         enable: true,
                         outMode: "bounce",
                         random: false,
-                        speed: 6,
+                        speed: 3,
                         straight: false,
+                        out_mode: "out",
+                        bounce: false,
+                        attract: {
+                          enable: false,
+                          rotateX: 600,
+                          rotateY: 1200
+                        }
                       },
                       number: {
                         density: {
@@ -52,7 +59,7 @@ export class Background extends Component {
                         value: 5,
                       },
                     },
-                    detectRetina: true,
+                    retina_detect: true,
                   }}
                 />
         )

@@ -1,6 +1,6 @@
 import React from 'react';
 import Spring from 'react-spring';
-import {BrowserRouter as Router, Switch, Route, useHistory} from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 import HomePage from "./components/HomePage";
 import AboutPage from "./components/AboutPage";
