@@ -1,5 +1,6 @@
 import React from 'react';
 import Spring from 'react-spring';
+import Particles from "react-particles-js";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 import HomePage from "./components/HomePage";
@@ -10,8 +11,6 @@ import ContactPage from "./components/ContactPage";
 
 import Footer from "./components/Footer";
 import Navigation from "./components/Navigation";
-import Background from "./components/Background";
-
 
 function App() {
   const data = {
@@ -19,10 +18,37 @@ function App() {
     lastName: "S G",
     copyright: "Copyright 2020"
   }
+
+  const particleParams = {
+    fpsLimit: 60,
+    particles: {
+      color: {
+        value: "#ffffff",
+      },
+      number: {
+        density: {
+          enable: true,
+          value_area: 1000,
+        },
+        value: 100,
+      },
+      opacity: {
+        value: 1,
+      },
+      shape: {
+        type: "circle",
+      },
+      size: {
+        random: true,
+        value: 5,
+      },
+    },
+    retina_detect: true,
+  }
   
   return (
-    <div className="container-app">
-      <Background/>
+    <div className="app">
+      <Particles className = "particles" params={particleParams} />
       <Router>
         <Navigation/>
         <Switch>

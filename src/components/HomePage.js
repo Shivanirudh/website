@@ -7,14 +7,14 @@ import instagram from "./images/instagram.ico";
 export class HomePage extends Component {
     render() {
         const {
-            firstName, 
-            lastName
+            firstname,
+            lastname
         } = this.props.data;
         return (
             <div className="homepage-container">
                 
                 <div className="name-pane" >
-                    <h1>{firstName} {lastName}</h1>
+                <h1>{firstname} {lastname}</h1>
                     <p>
                         <a href="https://www.linkedin.com/in/shivanirudh-s-g-b47265199/" target="blank"><img src={linkedin} alt="shivanirudh" height="30" width="30"/></a>
                         &nbsp;&nbsp;
