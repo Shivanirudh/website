@@ -170,3 +170,22 @@ export class Navigation extends Component {
 }
 
 export default Navigation
+
+.sidebar-item:link, .sidebar-item:visited{
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar-item:hover{
+  filter: grayscale(0%) opacity(1);
+  background-color: #e26120;
+  color: white;
+}
+
+.sidebar-item:active{
+  background-color: #e26120;
+  color: white;
+  text-decoration: none;
+}
+
+springConfig={ presets.wobbly }
