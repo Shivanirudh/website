@@ -9,7 +9,6 @@ import CVPage from "./components/CVPage";
 import ProjectPage from "./components/ProjectPage";
 import ContactPage from "./components/ContactPage";
 
-import Footer from "./components/Footer";
 import Navigation from "./components/Navigation";
 
 function App() {
@@ -59,21 +58,20 @@ function App() {
           <Route exact path = "/">
             <HomePage data={data}/>
           </Route>
-          <Route exact path = "/components/AboutPage">
+          <Route exact path = "/about">
             <AboutPage/>
           </Route>
-          <Route exact path = "/components/CVPage">
+          <Route exact path = "/cv">
             <CVPage/>
           </Route>
-          <Route exact path = "/components/ProjectPage">
+          <Route exact path = "/projects">
             <ProjectPage/>
           </Route>
-          <Route exact path = "/components/ContactPage">
+          <Route exact path = "/contact">
             <ContactPage/>
           </Route>
         </Switch>
       </Router>
-      <Footer data={data}/>
     </div>
     
 

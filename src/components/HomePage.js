@@ -5,6 +5,7 @@ import ProPic from "./images/Profile.jpg";
 import linkedin from "./images/linkedin.ico";
 import github from "./images/github.ico";
 import instagram from "./images/instagram.ico";
+import Footer from "./Footer";
 
 export class HomePage extends Component {
     constructor(props){
@@ -26,6 +27,7 @@ export class HomePage extends Component {
         const {
             firstName,
             lastName,
+            copyright
         } = this.props.data;
         const TEXTS = [
             "Data Science",
@@ -34,6 +36,7 @@ export class HomePage extends Component {
         ];
 
         return (
+            <div>
             <div className="homepage-container">
                 <div className="row">
                     <div className="pic-pane">
@@ -45,22 +48,24 @@ export class HomePage extends Component {
                     </div>
                 </div>
                 <div className="row">
-                    <p className="media-icons">
+                    <div className="media-icons">
                         <a href="https://www.linkedin.com/in/shivanirudh-s-g-b47265199/" target="blank"><img src={linkedin} alt="shivanirudh" height="40" width="40"/></a>
                         &nbsp;&nbsp;
                         <a href="https://github.com/Shivanirudh" target="blank"><img src={github} alt="shivanirudh" height="40" width="40"/></a>
                         &nbsp;&nbsp;
                         <a href="https://instagram.com/shiv_anirudh" target="blank"><img src={instagram} alt="shiv_anirudh" height="40" width="40"/></a>
-                    </p>
+                    </div>
                     <div className="interests-pane">
-                        <p>
+                        <div>
                             <TextTransition
                                 text={ TEXTS[this.state.index % TEXTS.length] }
                                 springConfig={presets.molasses}
                             />
-                        </p>
+                        </div>
                     </div>
                 </div>
+            </div>
+            <Footer data={this.props.data}/>
             </div>
         )
     }

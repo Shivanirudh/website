@@ -1,106 +1,52 @@
 import React, { Component } from 'react';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faBriefcase} from '@fortawesome/free-solid-svg-icons';
-import {faSchool} from '@fortawesome/free-solid-svg-icons';
-import {faStar} from '@fortawesome/free-solid-svg-icons';
+import {faGraduationCap} from '@fortawesome/free-solid-svg-icons';
+
 export class AboutPage extends Component {
     render() {
         return (
             <div>
-                <VerticalTimeline>
-  <VerticalTimelineElement
-    className="vertical-timeline-element--work"
-    contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-    contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-    date="2011 - present"
-    iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-    icon={<FontAwesomeIcon icon={faBriefcase}/>}
-  >
-    <h3 className="vertical-timeline-element-title">Creative Director</h3>
-    <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-    <p>
-      Creative Direction, User Experience, Visual Design, Project Management, Team Leading
-    </p>
-  </VerticalTimelineElement>
-  <VerticalTimelineElement
-    className="vertical-timeline-element--work"
-    date="2010 - 2011"
-    iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-    icon={<FontAwesomeIcon icon={faBriefcase}/>}
-  >
-    <h3 className="vertical-timeline-element-title">Art Director</h3>
-    <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
-    <p>
-      Creative Direction, User Experience, Visual Design, SEO, Online Marketing
-    </p>
-  </VerticalTimelineElement>
-  <VerticalTimelineElement
-    className="vertical-timeline-element--work"
-    date="2008 - 2010"
-    iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-    icon={<FontAwesomeIcon icon={faBriefcase}/>}
-  >
-    <h3 className="vertical-timeline-element-title">Web Designer</h3>
-    <h4 className="vertical-timeline-element-subtitle">Los Angeles, CA</h4>
-    <p>
-      User Experience, Visual Design
-    </p>
-  </VerticalTimelineElement>
-  <VerticalTimelineElement
-    className="vertical-timeline-element--work"
-    date="2006 - 2008"
-    iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-    icon={<FontAwesomeIcon icon={faBriefcase}/>}
-  >
-    <h3 className="vertical-timeline-element-title">Web Designer</h3>
-    <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
-    <p>
-      User Experience, Visual Design
-    </p>
-  </VerticalTimelineElement>
-  <VerticalTimelineElement
-    className="vertical-timeline-element--education"
-    date="April 2013"
-    iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-    icon={<FontAwesomeIcon icon={faSchool}/>}
-  >
-    <h3 className="vertical-timeline-element-title">Content Marketing for Web, Mobile and Social Media</h3>
-    <h4 className="vertical-timeline-element-subtitle">Online Course</h4>
-    <p>
-      Strategy, Social Media
-    </p>
-  </VerticalTimelineElement>
-  <VerticalTimelineElement
-    className="vertical-timeline-element--education"
-    date="November 2012"
-    iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-    icon={<FontAwesomeIcon icon={faSchool}/>}
-  >
-    <h3 className="vertical-timeline-element-title">Agile Development Scrum Master</h3>
-    <h4 className="vertical-timeline-element-subtitle">Certification</h4>
-    <p>
-      Creative Direction, User Experience, Visual Design
-    </p>
-  </VerticalTimelineElement>
-  <VerticalTimelineElement
-    className="vertical-timeline-element--education"
-    date="2002 - 2006"
-    iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-    icon={<FontAwesomeIcon icon={faSchool}/>}
-  >
-    <h3 className="vertical-timeline-element-title">Bachelor of Science in Interactive Digital Media Visual Imaging</h3>
-    <h4 className="vertical-timeline-element-subtitle">Bachelor Degree</h4>
-    <p>
-      Creative Direction, Visual Design
-    </p>
-  </VerticalTimelineElement>
-  <VerticalTimelineElement
-    iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
-    icon={<FontAwesomeIcon icon={faStar}/>}
-  />
-</VerticalTimeline>
+                <div className="about-text">
+                <h1>ABOUT ME:</h1>
+                <p>
+                  Hey there!
+                  <br/>
+                  I am currently a junior at SSN College of Engineering. I am interested in the fields of Data Science, Machine Learning and Natural Language Processing.
+                  The timeline below shows my experience.  
+                </p>
+                </div>
+
+                <VerticalTimeline style={{padding:'3rem'}}>
+                <VerticalTimelineElement
+                  className="vertical-timeline-element--work"
+                  contentStyle={{ background: '#6b605a', color: '#fff' , alignContent: 'left'}}
+                  contentArrowStyle={{ borderRight: '7px solid  #e26120' }}
+                  date="August 2020 - present"
+                  iconStyle={{ background: '#6b605a', color: '#fff' }}
+                  icon={<FontAwesomeIcon icon={faBriefcase} style={{fontSize:"50px", marginLeft:"-1.5rem"}}/>}
+                >
+                  <h3 className="vertical-timeline-element-title">Undergraduate Research Assistant</h3>
+                  <h4 className="vertical-timeline-element-subtitle">Solarillion Foundation</h4>
+                  <p>
+                    Research in Machine Learning
+                  </p>
+                </VerticalTimelineElement>
+                <VerticalTimelineElement
+                  className="vertical-timeline-element--education"
+                  date="2018-present"
+                  contentStyle={{ background: '#6b605a', color: '#fff' , alignContent: 'left'}}
+                  contentArrowStyle={{ borderRight: '7px solid  #e26120' }}
+                  iconStyle={{ background: '#6b605a', color: '#fff' }}
+                  icon={<FontAwesomeIcon icon={faGraduationCap} style={{fontSize:"50px", marginLeft:'-1.9rem'}}/>}
+                >
+                  <h3 className="vertical-timeline-element-title">B.E Computer Science and Engineering</h3>
+                  <h4 className="vertical-timeline-element-subtitle">SSN College of Engineering, Chennai</h4>
+                </VerticalTimelineElement>
+                </VerticalTimeline>
             </div>
         )
     }
