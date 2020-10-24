@@ -23,7 +23,7 @@ function App() {
     fpsLimit: 60,
     particles: {
       color: {
-        value: "#ffffff",
+        value: "#6b605a",
       },
       number: {
         density: {
@@ -34,12 +34,16 @@ function App() {
       },
       opacity: {
         value: 1,
+        random: false,
+        anim: {
+          enable: false,
+        }
       },
       shape: {
         type: "circle",
       },
       size: {
-        random: true,
+        random: false,
         value: 5,
       },
     },

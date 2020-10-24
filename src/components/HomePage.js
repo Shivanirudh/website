@@ -13,10 +13,15 @@ export class HomePage extends Component {
             index:0
         };
     }
-    incIndex = () => {
-        this.setState({index: this.state.index + 1});
+    componentDidMount() {
+        setInterval(() =>
+          {this.setIndex()},
+          3000 // every 3 seconds
+        );
     }
-
+    setIndex(){
+        this.setState({index: this.state.index+1});
+    }
     render() {
         const {
             firstName,
@@ -26,8 +31,8 @@ export class HomePage extends Component {
             "Data Science",
             "Machine Learning",
             "Natural Language Processing"
-          ];
-        setInterval(this.incIndex, 3000);
+        ];
+
         return (
             <div className="homepage-container">
                 <div className="row">
@@ -48,12 +53,12 @@ export class HomePage extends Component {
                         <a href="https://instagram.com/shiv_anirudh" target="blank"><img src={instagram} alt="shiv_anirudh" height="40" width="40"/></a>
                     </p>
                     <div className="interests-pane">
-                        <h1>
-                        {console.log(TEXTS)}
+                        <p>
                             <TextTransition
-                                text={ TEXTS[this.index % TEXTS.length] }
+                                text={ TEXTS[this.state.index % TEXTS.length] }
+                                springConfig={presets.molasses}
                             />
-                        </h1>
+                        </p>
                     </div>
                 </div>
             </div>
