@@ -13,7 +13,7 @@ export class AboutPage extends Component {
         return (
             <div>
                 <div className="about-text">
-                  <h1>ABOUT ME</h1>
+                  <h1>About me</h1>
                   <div className="about-bio">  
                     <h2>Bio:</h2>
                     <p className="about-content">

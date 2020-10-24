@@ -1,7 +1,7 @@
 import React, { Component} from 'react';
-import { Document, Page} from 'react-pdf';
-import {CV} from "./images/CV.pdf";
+import { Document, Page, pdfjs} from 'react-pdf';
 
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 export class CVPage extends Component {
   constructor(props){
     super(props);
@@ -23,23 +23,26 @@ export class CVPage extends Component {
   render() {
     return (
       <div>
-        <nav>
-          <button onClick={this.goToPrevPage}>Prev</button>
-          <button onClick={this.goToNextPage}>Next</button>
-        </nav>
-
-        <div style={{ width: 600 }}>
+        <div className="cv-text">
+          <h1>Resume</h1>
+        </div>
+        <div style={{ width: 1000 }} className="document">
           <Document
-            file="/images/CV.pdf"
+            file={process.env.PUBLIC_URL+"/CV.pdf"}
             onLoadSuccess={this.onDocumentLoadSuccess}
           >
-            <Page pageNumber={this.state.pageNumber} width={600} />
+            <Page pageNumber={this.state.pageNumber} width={1000} />
           </Document>
         </div>
-
-        <p>
+        <div>
+        <nav className="doc-buttons">
+              <button onClick={this.goToPrevPage}>Prev</button>
+              <button onClick={this.goToNextPage}>Next</button>
+        </nav>
+        <p className="page-text">
           Page {this.state.pageNumber} of {this.state.numPages}
         </p>
+        </div>
       </div>
     );
   }

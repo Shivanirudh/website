@@ -53,7 +53,7 @@ function App() {
     <div className="app">
       <Particles className = "particles" params={particleParams} />
       <Router>
-        {/*<Navigation/>*/}
+        <Navigation/>
         <Switch>
           <Route exact path = "/">
             <HomePage data={data}/>
