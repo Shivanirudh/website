@@ -17,15 +17,19 @@ body {
   overflow-x: hidden;
 }
 
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 0.25rem;
 }
 
-body::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   background: #1e1e24;
 }
 
-body::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
+
+::-webkit-scrollbar-thumb:hover{
   background: #6649b8;
 }
 
@@ -64,6 +68,7 @@ h3 {
   width: 5rem;
   height: 100vh;
   background-color:#433d3a;
+  z-index: 2;
 }
 
 .sidebar:hover{
@@ -164,7 +169,8 @@ h3 {
 .homepage-container{
   width: 100%;
   height: 100%;
-  padding-bottom: 30px;  
+  padding-bottom: 30px;
+  overflow: hidden;  
 }
 
 .row{
@@ -220,9 +226,24 @@ h3 {
 /* AboutPage.js */
 
 .about-text{
-  font-size: 20px;
+  font-size: 30px;
   justify-content: center;
-  margin-left: 15rem;
+  margin-left: 13rem;
   margin-top: 5rem;
   margin-bottom: 10rem;
+}
+
+/* CUSTOM LINE COLOR */
+/* The line */
+.vertical-timeline.vertical-timeline-custom-line::before {
+  background: #424242;
+}
+
+/* Icon container's border */
+.vertical-timeline.vertical-timeline-custom-line .vertical-timeline-element--work .vertical-timeline-element-icon {
+  box-shadow: 0 0 0 4px #e26120;
+}
+
+.vertical-timeline.vertical-timeline-custom-line .vertical-timeline-element--education .vertical-timeline-element-icon {
+  box-shadow: 0 0 0 4px #e26120, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
 }
