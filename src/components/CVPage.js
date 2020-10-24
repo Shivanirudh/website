@@ -3,7 +3,13 @@ import { Document, Page} from 'react-pdf';
 import {CV} from "./images/CV.pdf";
 
 export class CVPage extends Component {
-    state = { numPages: null, pageNumber: 1 };
+  constructor(props){
+    super(props);
+    this.state = { 
+      numPages: null,
+      pageNumber: 1 
+    };
+  }
 
   onDocumentLoadSuccess = ({ numPages }) => {
     this.setState({ numPages });
@@ -15,8 +21,6 @@ export class CVPage extends Component {
     this.setState(state => ({ pageNumber: state.pageNumber + 1 }));
 
   render() {
-    const { pageNumber, numPages } = this.state;
-
     return (
       <div>
         <nav>
@@ -26,15 +30,15 @@ export class CVPage extends Component {
 
         <div style={{ width: 600 }}>
           <Document
-            file={CV}
+            file="/images/CV.pdf"
             onLoadSuccess={this.onDocumentLoadSuccess}
           >
-            <Page pageNumber={pageNumber} width={600} />
+            <Page pageNumber={this.state.pageNumber} width={600} />
           </Document>
         </div>
 
         <p>
-          Page {pageNumber} of {numPages}
+          Page {this.state.pageNumber} of {this.state.numPages}
         </p>
       </div>
     );

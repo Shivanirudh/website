@@ -232,6 +232,10 @@ h3 {
   margin-top: 5rem;
   margin-bottom: 10rem;
 }
+.about-bio, .about-content{
+  position: relative;
+  left: 2rem;
+}
 
 /* CUSTOM LINE COLOR */
 /* The line */
