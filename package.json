@@ -2,7 +2,7 @@
   "name": "website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Shivanirudh.github.io/website",
+  "homepage": "https://Shivanirudh.github.io",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",

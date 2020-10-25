@@ -55,7 +55,7 @@ function App() {
       <Router>
         <Navigation/>
         <Switch>
-          <Route exact path = "/">
+          <Route exact path = "/website">
             <HomePage data={data}/>
           </Route>
           <Route exact path = "/about">

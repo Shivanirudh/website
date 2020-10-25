@@ -21,7 +21,7 @@ export class Navigation extends Component {
             </Link>
           </li>
           <li className="link">
-          <Link className="sidebar-item" to="/">
+          <Link className="sidebar-item" to="/website">
             <FontAwesomeIcon icon={faHome} style={{fontSize:"40px"}}/>
             <span className="sidebar-item-link">Home</span>
           </Link>
