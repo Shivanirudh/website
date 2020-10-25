@@ -300,3 +300,40 @@ h3 {
   text-align: center;
   margin-left: 5rem;
 }
+
+/*------------------------------------------------------------------------------------------------*/
+/* ContactPage.js */
+
+.contact-page{
+  width: 100%;
+  height: 100%;
+}
+.contact-title{
+  margin-top: 5rem;
+  margin-left: 13rem;
+}
+
+.contact-stuff{
+  margin-left: 13rem;
+}
+.mail-box{
+  position:relative;
+  top: 3rem;
+  left:3rem;
+  background-color: #433d3a;
+  width: 200px
+}
+
+.icon{
+  position: relative;
+  left: 1.5rem;
+  font-size: 100px;
+  color: white;
+}
+
+.arrow-icon{
+  position: relative;
+  left: 3rem;
+  top:-0.5rem;
+  font-size: 70px;
+}

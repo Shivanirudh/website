@@ -5,7 +5,6 @@ import ProPic from "./images/Profile.jpg";
 import linkedin from "./images/linkedin.ico";
 import github from "./images/github.ico";
 import instagram from "./images/instagram.ico";
-import Footer from "./Footer";
 
 export class HomePage extends Component {
     constructor(props){
@@ -65,7 +64,9 @@ export class HomePage extends Component {
                     </div>
                 </div>
             </div>
-            <Footer data={this.props.data}/>
+            <div className="footer">
+                &copy; {copyright}
+            </div>
             </div>
         )
     }
