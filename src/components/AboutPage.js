@@ -6,7 +6,6 @@ import '../index.css';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faBriefcase} from '@fortawesome/free-solid-svg-icons';
 import {faGraduationCap} from '@fortawesome/free-solid-svg-icons';
-import {faAngleUp} from '@fortawesome/free-solid-svg-icons';
 
 export class AboutPage extends Component {
     render() {
