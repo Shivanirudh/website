@@ -317,34 +317,55 @@ h3 {
 }
 
 .contact-stuff{
+  display: flexbox;
+  flex-direction: column;
   width: 80%;
   height: auto;
   margin-left: 13rem;
+  margin-bottom: 2rem;
+  margin-top: -2rem;
 }
+
 .mail-box{
   display: flex;
   flex-direction: row;
-  position: absolute;
-  top: 15rem;
-  left:15rem;
+  position: relative;
+  top: 3em;
+  left:2rem;
   background: #433d3a;
   width: 13rem;
+  height: 120px;
+  align-items: center;
   border-radius: 15%;
 }
 
 .icon{
   position: relative;
   left: 1.5rem;
-  font-size: 100px;
+  font-size: 80px;
   color: white;
 }
 
+.mail-box .arrow-icon{
+  display: inline;
+  position: relative;
+  left:-10rem;
+  font-size: 60px;
+  transform: rotate(0deg);
+  transition: 600ms;
+}
+.phone-box .arrow-icon{
+  display: inline;
+  position: relative;
+  left:-4.5rem;
+  font-size: 60px;
+  transform: rotate(0deg);
+  transition: 600ms;
+}
 .arrow-icon{
   display: inline;
   position: relative;
-  top:1rem;
-  left: -11rem;
-  font-size: 70px;
+  font-size: 60px;
   transform: rotate(0deg);
   transition: 600ms;
 }
@@ -352,8 +373,6 @@ h3 {
 .icon-text{
   display: inline;
   position:relative;
-  top:2rem;
-  left: 0rem;
   opacity: 0;
   transition: 600ms;
 }
@@ -369,17 +388,104 @@ h3 {
 
 .mail-box:hover .icon-text{
   opacity:1;
+  top:1.5rem;
   left: 10rem;
   font-size: 20px;
+  width: 100%;
+  text-align: center;
+  margin-top:-3rem;
   text-decoration: none;
+  justify-content: space-evenly;
 }
 
 .mail-box:hover .arrow-icon{
   transform: rotate(-180deg);
-  margin-left: 32rem;
+  margin-left: 30rem;
 }
 
 a:link, a:visited{
   color: white;
   text-decoration: none;
+}
+
+.phone-box{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  top: 6rem;
+  left:2rem;
+  background: #433d3a;
+  width: 13rem;
+  height: 120px;
+  align-items: center;
+  border-radius: 15%;
+}
+
+.phone-box:hover{
+  width: 50rem;
+  border-radius: 5%;
+  text-align: center;
+}
+
+.phone-box:hover .icon{
+  color: #e26120;
+}
+
+.phone-box:hover .icon-text{
+  opacity:1;
+  left: 10rem;
+  font-size: 20px;
+  text-decoration: none;
+  width: 100%;
+  display: inline;
+  justify-content: space-evenly;
+}
+
+.phone-box:hover .arrow-icon{
+  transform: rotate(-180deg);
+  margin-left: 32rem;
+}
+
+.location-box{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  top: 9rem;
+  left:2rem;
+  background: #433d3a;
+  height: 120px;
+  align-items: center;
+  width: 13rem;
+  border-radius: 15%;
+}
+
+.location-box:hover{
+  width: 50rem;
+  border-radius: 5%;
+  text-align: center;
+}
+
+.location-box:hover .icon{
+  color: #e26120;
+}
+
+.location-box:hover .icon-text{
+  opacity:1;
+  left: 10rem;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.location-box:hover .arrow-icon{
+  transform: rotate(-180deg);
+  margin-left: 32.5rem;
+}
+
+.contact-last{
+  padding: 2rem;
+  position: absolute;
+  bottom:0;
+  left:40rem;  
+  text-align: center;
+
 }
