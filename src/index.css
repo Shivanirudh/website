@@ -97,7 +97,7 @@ h3 {
 .link{
   width: 100%;
   align-self: center;
-  padding-left: 1rem;
+  margin-left: 3rem;
 }
 
 .sidebar-item{
@@ -112,6 +112,7 @@ h3 {
 }
 
 .sidebar-item:hover{
+  width: 100%;
   filter: grayscale(0%) opacity(1);
   background: #e26120;
   color: white;
@@ -263,9 +264,11 @@ h3 {
 .document{
   height: auto;
   align-items: center;
-  background: black;
+  background: {
+    color: purple;
+    filter: blur(8px);
+  }
   width: 100%;
-  
 }
 
 .pdf{
@@ -314,14 +317,19 @@ h3 {
 }
 
 .contact-stuff{
+  width: 80%;
+  height: auto;
   margin-left: 13rem;
 }
 .mail-box{
-  position:relative;
-  top: 3rem;
-  left:3rem;
-  background-color: #433d3a;
-  width: 200px
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 15rem;
+  left:15rem;
+  background: #433d3a;
+  width: 13rem;
+  border-radius: 15%;
 }
 
 .icon{
@@ -332,8 +340,46 @@ h3 {
 }
 
 .arrow-icon{
+  display: inline;
   position: relative;
-  left: 3rem;
-  top:-0.5rem;
+  top:1rem;
+  left: -11rem;
   font-size: 70px;
+  transform: rotate(0deg);
+  transition: 600ms;
+}
+
+.icon-text{
+  display: inline;
+  position:relative;
+  top:2rem;
+  left: 0rem;
+  opacity: 0;
+  transition: 600ms;
+}
+.mail-box:hover{
+  width: 50rem;
+  border-radius: 5%;
+  text-align: center;
+}
+
+.mail-box:hover .icon{
+  color: #e26120;
+}
+
+.mail-box:hover .icon-text{
+  opacity:1;
+  left: 10rem;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.mail-box:hover .arrow-icon{
+  transform: rotate(-180deg);
+  margin-left: 32rem;
+}
+
+a:link, a:visited{
+  color: white;
+  text-decoration: none;
 }

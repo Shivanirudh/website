@@ -14,6 +14,17 @@ export class ContactPage extends Component {
                 <div className="contact-stuff">
                     <div className="mail-box">
                         <FontAwesomeIcon className="icon" icon={faEnvelope}/>
+                        <span className="icon-text"><a href="mailto:shivanirudh2001@gmail.com">shivanirudh2001@gmail.com</a></span>
+                        <FontAwesomeIcon className="arrow-icon" icon={faChevronRight}/>
+                    </div>
+                    <div className="phone-box">
+                        <FontAwesomeIcon className="icon" icon={faEnvelope}/>
+                        <span className="icon-text"><a href="mailto:shivanirudh2001@gmail.com">shivanirudh2001@gmail.com</a></span>
+                        <FontAwesomeIcon className="arrow-icon" icon={faChevronRight}/>
+                    </div>
+                    <div className="mail-box">
+                        <FontAwesomeIcon className="icon" icon={faEnvelope}/>
+                        <span className="icon-text"><a href="mailto:shivanirudh2001@gmail.com">shivanirudh2001@gmail.com</a></span>
                         <FontAwesomeIcon className="arrow-icon" icon={faChevronRight}/>
                     </div>
                 </div>

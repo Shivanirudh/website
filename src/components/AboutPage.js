@@ -15,7 +15,7 @@ export class AboutPage extends Component {
                   <h1>About me</h1>
                   <div className="about-bio">  
                     <h2>Bio:</h2>
-                    <p className="about-content">
+                    <p className="about-content" style={{textTransform:"none"}}>
                       Hey there!
                       <br/>
                       I am currently a junior at SSN College of Engineering. I am an avid programmer and software developer, interested in the fields of Data Science, Machine Learning and Natural Language Processing.
