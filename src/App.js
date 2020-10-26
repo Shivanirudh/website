@@ -10,6 +10,7 @@ import ProjectPage from "./components/ProjectPage";
 import ContactPage from "./components/ContactPage";
 
 import Navigation from "./components/Navigation";
+import Window from "./components/Window";
 
 function App() {
   const data = {
@@ -52,6 +53,7 @@ function App() {
   return (
     <div className="app">
       <Particles className = "particles" params={particleParams} />
+      <Window/>
       <Router>
         <Navigation/>
         <Switch>
