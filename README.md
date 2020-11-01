@@ -1,3 +1,6 @@
+## Edits
+Use `npm install` to install packages that weren't installed with `npm install --save package`
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
