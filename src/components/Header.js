@@ -17,7 +17,7 @@ const Header = () => {
       </div>
       <nav className={`nav-links ${isNavOpen ? 'open' : ''}`}>
         <ul>
-          <li><Link to="/website" onClick={toggleNav}>Home</Link></li>
+          <li><Link to="/" onClick={toggleNav}>Home</Link></li>
           <li><Link to="/about" onClick={toggleNav}>About</Link></li>
           <li><Link to="/projects" onClick={toggleNav}>Projects</Link></li>
           <li><Link to="/cv" onClick={toggleNav}>CV</Link></li>
