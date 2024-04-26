@@ -1,9 +1,14 @@
 name: Deploy to GitHub Pages
 
+# on:
+#   push:
+#     branches:
+#       - main  # Adjust this to match your main branch name
 on:
   push:
-    branches:
-      - main  # Adjust this to match your main branch name
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   deploy:
